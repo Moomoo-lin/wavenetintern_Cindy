@@ -7,7 +7,7 @@
 .banner{
     width: 100%;
     height: 100vh; 
-    /* height: 300px; */
+    /* height: 600px; */
     /* 改高度調整位置 */
     background-color:#333399 ;
     background: linear-gradient(115deg, #333399 50% ,transparent 50%)
@@ -47,8 +47,35 @@
 .banner-txt h2{
 font-size: 50px;
 font-weight: 500;
+color: #FFFFFF;
 }
 .banner-txt p{
     font-size: 30px;
     font-weight: 20;
+    color: #FFFFFF;
+}
+
+.container button{
+    background-color: #FFCC00;
+    color:#000066;
+    height: auto;
+    font-size: 20px;
+    font-weight: 600;
+    padding: .3em;
+    margin-top:.3em ;
+    width: fit-content;
+    border:2px solid black;
+    border-radius:6px ;
+    text-align: center;
+}
+.container button:hover{
+    background-color: #000066;
+    color:#FFFFFF;
+    height: auto;
+    font-size: 20px;
+    font-weight: 600;
+    padding: .3em;
+    margin-top:.3em ;
+    width: fit-content;
+    
 }
