@@ -2157,6 +2157,9 @@ button:focus {
 .primary {
   background: #52c5fd;
 }
+.primaryb2 {
+  background: url("../intro/B2.png") no-repeat scroll center 0/cover;
+}
 
 .primary:before {
   background: #2faae6;
