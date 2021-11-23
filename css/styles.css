@@ -7412,6 +7412,13 @@ textarea.form-control-lg {
   background-size: cover;
   height: 800px;
 }
+.bg-background3 {
+  background-image: url("../intro/arrow.gif") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
 
 .bg-secondary {
   background-color: #6c757d !important;
