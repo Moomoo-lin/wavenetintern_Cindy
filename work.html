@@ -7,6 +7,137 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
+<style>
+    /* 自定義 RWD 樣式 */
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 15px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .image-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .image-caption {
+        color: #ffffff;
+        font-size: 0.9rem;
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+    
+    /* 新增板塊設計樣式 */
+    .content-block {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px 0;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        color: #ffffff;
+    }
+
+    .content-block:hover {
+        background-color: rgba(13, 37, 63, 0.95);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-title {
+        color: #FFE5B4;  /* 鵝黃色 */
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .text-content {
+        color: #ffffff;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+    /* 新增列點樣式 */
+    .list-item {
+        display: flex;
+        margin: 10px 0;
+        line-height: 1.6;
+        align-items: flex-start;
+        color: #ffffff;
+    }
+
+    .list-number {
+        min-width: 25px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        color: #ffffff;
+    }
+
+    .list-content {
+        flex: 1;
+        text-align: justify;
+        padding-right: 15px;
+        color: #ffffff;
+    }
+
+    .highlight-text {
+        color: #FFE5B4;  /* 改為鵝黃色 */
+        font-weight: 500;
+        display: block;
+        margin: 15px 0 10px 0;
+    }
+
+    .content-block p {
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+
+    .content-block p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 確保所有文字元素都繼承白色 */
+    .content-block * {
+        color: #ffffff;
+    }
+
+    /* 覆蓋 Bootstrap 的預設文字顏色 */
+    .text-white-75 {
+        color: #ffffff !important;
+    }
+
+    /* 確保所有標題都是鵝黃色 */
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFE5B4 !important;
+    }
+
+    @media (max-width: 768px) {
+        .text-content {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .list-content {
+            padding-right: 10px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .navbar-brand {
+            font-size: 1.2rem;
+        }
+        
+        .nav-link {
+            font-size: 0.9rem;
+        }
+    }
+</style>
 <title>work|工作內容</title>
 </head>
 <body id="page-top">
@@ -35,112 +166,83 @@
             <div class="col-lg-8 text-center">
                 <h2 class="text-white mt-0">工作內容</h2>
                 <hr class="divider divider-light" />
-                <p class="text-white-75 mb-3" >
-                    主要為協助全端工程師，跟團隊進行前後端串接、報表系統Debug、開發報表功能等等，
-                    視學習能力和任務進行狀況調整工作，利用slack進行溝通，每天開會回報工作內容，
-                    <br>
-                    並在jira紀錄工作進行狀態。
+                <div class="content-block">
+                    <p class="text-content">
+                        主要為協助全端工程師，跟團隊進行前後端串接、報表系統Debug、開發報表功能等等，
+                        視學習能力和任務進行狀況調整工作，利用slack進行溝通，每天開會回報工作內容，
+                        <br>
+                        並在jira紀錄工作進行狀態。
                     </p>
-                    <p class="text-white-75 mb-4" ><br>● 前期--安裝相關軟體及操作
-                        <br>
-                        1. 安裝nodejs及衍生軟體 :  主要用來開發後端
-                        <br>
-                        2. 使用vsCode編譯程式，學會使用git指令，通常啟用dep分支做修改。
-                        <br>                      
-                        3. 學習使用postman : 用來測試API串接是否正常
-                        <br>
-                        4. 練習串接API及全端思維培養 : 參考jstraining手冊做練習
-                        <br>
-                        
-                        <br>
-                        ● 前期—協助工程師做出前端頁面
-                        <br>
-                        客戶提供pdf檔案，要把它做成網頁版，並符合RWD格式，其中插入google api、表單等功能，主要是做出RWD這部分比較花時間，
-                        另外時間預估的有點太少，所以後面沒完成的部分要交給正職做，另外還要確認客戶給的檔案是否是正確的，像是一開始給的檔案不齊全，
-                        要趕緊請PM協助詢問，不然一來一往也會耗費很多時間。雖然這個專案比較臨時，但我還蠻喜歡的，也學習到架設網站背後，要注意到很多細節，
-                        也順便複習了html跟css。
-                        <br> <br>
-                        ● 前期—架設虛擬環境跟安裝MongoDB
-                        <br>
-                        因為是自備筆電，所以一下太多檔案很容易記憶體過載，公司有提供虛擬端      讓我在那邊做專案的相關操作，不過要設定蠻多東西，且解決報錯發了一點時間，但之後都會讓我更方便使用。
-                        *需安裝FileZilla, Redis, Docker,設定ssh key
-                        <br><br>
-                        ●中期—接觸報表專案及FB後台
-                        <br>
-                            研發部主要會有一個報表系統，可以協助將投放在fb的後台廣告數據，用程式去call 相關API,將廣告數據拉回，依照使用者設定成想要的圖表形式，還有添加自己所想要的欄位，最後轉成excel下載，而我們則是要協助修改報表系統中出現的bug。
-                            <br> 1. 學習使用Jira及Bitbucket回報專案進度
-                            <br>2. 架設虛擬機環境
-                            <br>3. 成功在本地端及虛擬端啟用專案N
-                            <br>4. 進入企業管理平台，查看後台數據與抓下來的是否相同，還有熟悉報表系統
-                            的操作方式，在產生報表時有很多組合方式。
-                        <br>
-                        開始蠻吃力的，不知道從何下手，但同事有推薦我Debug相關的工具，像是Vs code內建的逐步檢視，
-                        能設立中斷點，執行片段的程式碼，都要靠自己去解決發現的問題。與先前不同的是，有些練習都還能上網找相關的資料解決，
-                        修改專案幾乎要靠自己的判斷，也要適時請教同事不會的問題，才會加快整個速度，也讓我更了解業界工作的模式，
-                        知道自己還要充實更多的實力，雖然覺得壓力蠻大的，但同時又可以學到很多東西，還要繼續加油!
-                        <br>
-                        
-                        <br>
-                        <img src="intro/bug1.png">
+                </div>
 
-                        <br>
-                        ●  報表產生之圖表
-                        <br>
-                        <br>
-                        <img src="intro/fb.png">
-
-                        <br>
-                        ●  fb產生之圖表
-                        <br> <br>
-                        ●  後期—Debug報表系統及觀察FB後台
-                        <br>
-                        研發部主要會有一個報表系統，可以協助將投放在fb的後台廣告數據，用程式去 call 相關API,將廣告數據拉回，
-                       
-                        依照使用者設定成想要的圖表形式，還有添加自己所想要的欄位，
-                        <br>
-                        最後轉成excel下載，
-                       
-                        而我們則是要協助修改報表系統中出現的bug。
-                        <br>
-                        1. 要先架設虛擬環境，在這邊接觸到了很多docker及mongoDB的概念。
-                        <br>
-                        2. 藉由企業管理平台觀看投放廣告之數據，並了解每個欄位對應的值為何，
-                        <br>
-                        是否有正確將數據call回系統當中，另外一但fb或ios系統更新時，容易遇到問題，
-                        <br>
-                        要寫信去問FB開發人員。
-                        <br>
-                        <br>
-                        3. 程數部門每天會使用報表系統，要隨時處理他們臨時回報的問題。
-                        <br>
-                        <br>
-                        4. 現在正在處理潛在客戶轉換率為0的Bug，不只要看內部程式碼，
-                        <br>
-                        還要觀看後台數據是否正確，因為報表系統很龐大，所以需要花一點熟悉，
-                        <br>
-                        並且找出真正問題所在，一開始有點沒有頭緒，但正職有推薦我Debug的工具，
-
-                        <br>
-                        讓我可以更快找出問題，希望之後也能越來越上手。
-                        <br>
-                        <img src="intro/petflow.jpg" width="500px" height="500px">
-                        <br>
-                        在修bug的過程中，主管建議我將過程記錄下來，我便用一個心智圖記錄這些過程，最後也順利解決! 
-                        <br><br>
-                        ● 暑期+後期—維護報表系統及新增功能
-                        <br>在前述的訓練之後，我越來越能掌握此系統的編寫邏輯，也開始接觸更複雜的維護工作。此報表系統有些功能需要幫忙修改，像是有些特定欄位抓不到數據、與後台數據對不上等等，都需要檢視整個程式碼去做測試跟修改，偏向後端的工作，也會接觸到前端UI的美化。目前較常負責功能開發的實作，例如:上下檢視的移動、產生excel時的欄位合併等等。主要分為:後端優化(開發新功能及維修)、前端優化(提升UX體驗)、突發處理(緊急的事況排除)。
-                        <br><br>
-                        ● 每日開會追蹤進度
-                        <br> 每天早上要與研發部的同事一起開會，包括主管、PM、其他工程師等等，報告自己   的進度狀況。
-                        </p>
-                    <p class="text-white-75" mb-4>
-                        
+                <div class="content-block">
+                    <h3 class="section-title">前期工作</h3>
+                    <p class="text-content">
+                        <span class="highlight-text">● 安裝相關軟體及操作</span>
+                        <div class="list-item">
+                            <span class="list-number">1.</span>
+                            <span class="list-content">安裝nodejs及衍生軟體 : 主要用來開發後端</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-number">2.</span>
+                            <span class="list-content">使用vsCode編譯程式，學會使用git指令，通常啟用dep分支做修改。</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-number">3.</span>
+                            <span class="list-content">學習使用postman : 用來測試API串接是否正常</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-number">4.</span>
+                            <span class="list-content">練習串接API及全端思維培養 : 參考jstraining手冊做練習</span>
+                        </div>
                     </p>
-                    <br>
-                    <br>
-                    <br>
-                    
-                </p>
+                </div>
+
+                <div class="content-block">
+                    <h3 class="section-title">中期工作</h3>
+                    <p class="text-content">
+                        <span class="highlight-text">● 接觸報表專案及FB後台</span>
+                        <br>
+                        研發部主要會有一個報表系統，可以協助將投放在fb的後台廣告數據，用程式去call 相關API,將廣告數據拉回，依照使用者設定成想要的圖表形式，還有添加自己所想要的欄位，最後轉成excel下載，而我們則是要協助修改報表系統中出現的bug。
+                        <div class="list-item">
+                            <span class="list-number">1.</span>
+                            <span class="list-content">學習使用Jira及Bitbucket回報專案進度</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-number">2.</span>
+                            <span class="list-content">架設虛擬機環境</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-number">3.</span>
+                            <span class="list-content">成功在本地端及虛擬端啟用專案N</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="list-number">4.</span>
+                            <span class="list-content">進入企業管理平台，查看後台數據與抓下來的是否相同，還有熟悉報表系統的操作方式，在產生報表時有很多組合方式。</span>
+                        </div>
+                    </p>
+                    <div class="image-container">
+                        <img src="intro/bug1.png" class="img-fluid" alt="Bug 截圖">
+                        <p class="image-caption">報表產生之圖表</p>
+                        
+                        <img src="intro/fb.png" class="img-fluid" alt="FB 圖表">
+                        <p class="image-caption">FB 產生之圖表</p>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3 class="section-title">後期工作</h3>
+                    <p class="text-content">
+                        <span class="highlight-text">● 維護報表系統及新增功能</span>
+                        <br>
+                        在前述的訓練之後，我越來越能掌握此系統的編寫邏輯，也開始接觸更複雜的維護工作。此報表系統有些功能需要幫忙修改，像是有些特定欄位抓不到數據、與後台數據對不上等等，都需要檢視整個程式碼去做測試跟修改，偏向後端的工作，也會接觸到前端UI的美化。
+                    </p>
+                    <div class="image-container">
+                        <img src="intro/petflow.jpg" class="img-fluid" alt="心智圖">
+                        <p class="image-caption">在修bug的過程中，主管建議我將過程記錄下來，我便用一個心智圖記錄這些過程，最後也順利解決!</p>
+                    </div>
+                </div>
+
                 <a class="btn btn-light btn-xl" href="#page-top">Back toTop</a>
             </div>
         </div>

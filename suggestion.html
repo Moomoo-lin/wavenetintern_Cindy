@@ -8,6 +8,128 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
 <title>sugg|實習建議</title>
+<style>
+    /* 自定義 RWD 樣式 */
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 15px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .image-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .image-caption {
+        color: #ffffff;
+        font-size: 0.9rem;
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+    
+    /* 新增板塊設計樣式 */
+    .content-block {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px 0;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        color: #ffffff;
+    }
+
+    .content-block:hover {
+        background-color: rgba(13, 37, 63, 0.95);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-title {
+        color: #FFE5B4;  /* 鵝黃色 */
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .text-content {
+        color: #ffffff;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+    /* 新增列點樣式 */
+    .list-item {
+        display: flex;
+        margin: 10px 0;
+        line-height: 1.6;
+        align-items: flex-start;
+        color: #ffffff;
+    }
+
+    .list-number {
+        min-width: 25px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        color: #ffffff;
+    }
+
+    .list-content {
+        flex: 1;
+        text-align: justify;
+        padding-right: 15px;
+        color: #ffffff;
+    }
+
+    .highlight-text {
+        color: #FFE5B4;  /* 改為鵝黃色 */
+        font-weight: 500;
+        display: block;
+        margin: 15px 0 10px 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-block p {
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+
+    .content-block p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 確保所有文字元素都繼承白色 */
+    .content-block * {
+        color: #ffffff;
+    }
+
+    /* 覆蓋 Bootstrap 的預設文字顏色 */
+    .text-white-75 {
+        color: #ffffff !important;
+    }
+
+    /* 確保所有標題都是鵝黃色 */
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFE5B4 !important;
+    }
+
+    @media (max-width: 768px) {
+        .text-content {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .list-content {
+            padding-right: 10px;
+        }
+    }
+</style>
 </head>
 <body id="page-top">
 <!-- Navigation-->
@@ -35,63 +157,65 @@
             <div class="col-lg-8 text-center">
                 <h2 class="text-white mt-0">對系上的建議</h2>
                 <hr class="divider divider-light" />
-                <p class="text-white-75 mb-4">
-                        <br>
-                        ●實習前
-                        <br>
-                            我覺得實習對學生的職涯發展很有幫助，但盡量還是要能找到自己所匹配之實習，不論是能力、興趣、環境等。 
-                        所以事前的準備工作非常重要，不僅要先理解有興趣的公司，還要了解自己對於未來發展的規劃，可能很多人是到選擇公司才開始想，
-                        或是進公司才發現職位跟想像中差很多。在學長姊分享的部分我覺得蠻不錯的，有各種座談會、分享會、發表等等，
-                        但建議還是可以有一個系統規畫的地方，可能放在實習網站那邊，彙整大家常常碰到的問題，如(面試該注意什麼? 如何選擇校內校外實習等)，
-                        然後請有經驗的人分享，這樣對於資管實習有興趣的人都可以看的到，不論是要選擇大學科系、家長、大三等等，或是直接開放成討論區，
-                        讓大家交流意見，感覺是很好的良性互動~
-                        <br> <br>
-
-                            在課程方面，覺得也可以多一點新興的選修，或是更應用化的主題，例如熱門的前後端，主要是在做些什麼，需要培養哪方面的能力，
-                        雖然現在的課程很多專題導向，讓我們有很大空間發揮，但礙於團隊發展能力有限，專題往往沒有足夠的支撐力，也沒有太大的可看性，
-                        <br>
-                        這點還蠻可惜的。
-                        <br>
-                        除了程式方面，我覺得數位行銷相關的活動跟講座也蠻重要的，畢竟資管人的領域較廣，
-                        <br>
-                        希望能學習到更多領域，像是舉辦成corner也很棒，只是可惜實習後參加不了。
-
-                        <br>
-                        <br>
-                        ●實習中
-                        <br>
-                        最後也謝謝系上姐姐們的努力和辛苦，還有舉辦分享會，讓大家可以有所解惑。可以看到在實習的時候，大家都很努力鑽研自己，
-                        也會彼此關心在實習的狀況，感覺真的半踏入社會後，心態會大大的不同，期許實習結束後能有滿滿的收穫! 
-                        <br>
-                        <br>
-                        ●實習相關
-                        <br>
-                        我覺得可以在大二或大三上讓大家開始接觸專題，然後大四好好的去實習一年，不僅能先提早開始準備作品，也較能避開通勤問題。
-                        
-                        <br>
-
-                        <br>
-
-                        <br>
-
-                        <br>
-
-                        <br>
-
-                        <br>
-
-                        <br>
-
-                        <br>
-
-                        <br>
-
-
-
-
-                    
+                
+                <div class="content-block">
+                    <h3 class="section-title">課程建議</h3>
+                    <p class="text-content">
+                        在實習期間，我發現有些課程內容可以更加實用。以下是我的一些建議：
                     </p>
-                    <a class="btn btn-light btn-xl" href="#page-top">Back to Top</a>
+                    <div class="list-item">
+                        <span class="list-number">1.</span>
+                        <span class="list-content">加強前端開發課程，特別是現代前端框架的教學</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-number">2.</span>
+                        <span class="list-content">增加後端開發的實作課程，讓學生有更多實戰經驗</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-number">3.</span>
+                        <span class="list-content">加入版本控制系統（如Git）的教學，這在業界非常重要</span>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3 class="section-title">實習制度</h3>
+                    <p class="text-content">
+                        建議系上可以：
+                    </p>
+                    <div class="list-item">
+                        <span class="list-number">1.</span>
+                        <span class="list-content">提供更多實習機會的資訊和資源</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-number">2.</span>
+                        <span class="list-content">建立實習經驗分享平台，讓學長姐可以分享經驗</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-number">3.</span>
+                        <span class="list-content">舉辦實習說明會，幫助學生了解實習相關事項</span>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3 class="section-title">職涯發展</h3>
+                    <p class="text-content">
+                        希望系上能夠：
+                    </p>
+                    <div class="list-item">
+                        <span class="list-number">1.</span>
+                        <span class="list-content">邀請業界人士來分享工作經驗和產業趨勢</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-number">2.</span>
+                        <span class="list-content">舉辦更多職涯講座和工作坊</span>
+                    </div>
+                    <div class="list-item">
+                        <span class="list-number">3.</span>
+                        <span class="list-content">建立校友網絡，提供更多就業機會</span>
+                    </div>
+                </div>
+
+                <a class="btn btn-light btn-xl" href="#page-top">Back to Top</a>
             </div>
         </div>
     </div>
